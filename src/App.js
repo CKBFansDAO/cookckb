@@ -1,24 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import appConfig from './appConfig';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='flex justify-center p-10'>
+
+      <div className="flex flex-col ">
+        <span className='text-[96px] font-bold'>
+          Hello CKBee 😄
+        </span>
+        <div className='flex'>
+          <span className='text-green-700'>RPC url:</span>
+          {appConfig.CKB.CKB_RPC_URL}
+        </div>
+        <div className='flex'>
+          <span className='text-green-700'>Indexer url:</span>
+          {appConfig.CKB.CKB_INDEXER_URL}
+        </div>
+
+      </div>
     </div>
+
   );
 }
 

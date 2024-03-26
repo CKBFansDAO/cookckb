@@ -3,12 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ckb-lumos/bi": "^0.21.1",
+    "@ckb-lumos/ckb-indexer": "^0.21.1",
+    "@ckb-lumos/config-manager": "^0.21.1",
+    "@ckb-lumos/helpers": "^0.21.1",
+    "@ckb-lumos/rpc": "^0.21.1",
+    "@nervosnetwork/ckb-sdk-utils": "^0.109.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "jsbi": "^4.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "tailwindcss": "^3.4.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
