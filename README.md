@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+## cookckb 简介
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+当您进入 CKB 开发领域时，可能会感到有些困惑，不知道从何入手。为了帮助开发者更好地了解 CKB 应用开发，我们发起了一个名为 `cookckb` 的 Public Goods 项目。
 
-## Available Scripts
+## 我们的愿景
 
-In the project directory, you can run:
+`cookckb` 项目旨在提供一系列 CKB 应用开发的功能点，类比为一道道菜，方便开发者快速上手 CKB 应用开发。每个功能点都将以 demo 的形式展示，并提供代码实现和文档说明，供开发者参考。所有代码都是开源的，任何人都可以进行贡献，提交的代码将自动部署到 `cookckb.dev` 网站上，供开发者体验和学习。
 
-### `npm start`
+我们希望通过 `cookckb` 项目，为 CKB 应用开发者提供一个开放、友好、高效的学习和交流平台，让开发者能够更轻松地掌握 CKB 应用开发的技能，从而为 CKB 生态的发展做出更多的贡献。
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 特点
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 提供多个 CKB 应用开发的功能点，以 demo 的形式展示
+- 所有代码都是开源的，任何人都可以进行贡献
+- 提供详细的文档说明（ [docs.cookckb.dev](https://docs.cookckb.dev) ），供开发者参考
+- 提供自动部署功能，提交的代码将自动部署到 [cookckb.dev](https://cookckb.dev) 网站上
+- 提供一个开放、友好、高效的学习和交流平台
 
-### `npm test`
+## 如何贡献
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+1. 克隆
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+cookckb 是一个社区项目，我们希望更多社区开发者参与进来完善它，为了方便改进 cookckb, 首先需要 fork 到自己的账户下，然后 clone 文档的源码到本地。
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone git@github.com:your-username/cookckb.git
+cd cookckb
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. 安装
 
-### `npm run eject`
+你的机器上需要预先安装好 Node.js 或者 yarn。
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+然后在项目目录下运行下面的语句安装依赖：
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+$ npm i
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. 本地开发、调试
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+在项目目录下运行以下命令：
 
-## Learn More
+```bash
+$ npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+在本地进行新的功能点 demo 的开发或者优化已有 demo ，并完成测试验证。
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. 提交 Pull Request
 
-### Code Splitting
+（1）创建分支
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+创建简洁而具有描述性的分支，在该分支上进行编辑修改。
 
-### Analyzing the Bundle Size
+（2）推送
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+将自己修改好的内容提交并推送到远程仓库，在 GitHub 的页面会看到相应的拉取请求（Pull Request）提示，提交请求即可。
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
