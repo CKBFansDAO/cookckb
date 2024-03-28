@@ -1,0 +1,118 @@
+{
+  "translation": {
+    "common": {
+      "slogan":"一起 CookCKB 吧!",
+      "slogan-desc":"就像烹饪一道美味的佳肴一样，创造 CKB 应用也需要正确的配料和菜谱",
+      "tutorial": "教程",
+      "learn-more": "了解更多",
+      "coming-soon": "敬请期待",
+      "connect-wallet":"连接",
+      "confirmation":"确认",
+      "continue":"继续",
+      "close":"关闭",
+      "finish":"完成",
+      "next":"下一步",
+      "back":"返回",
+      "items":"项",
+      "remove-all":"清空",
+      "submit-pay":"提交",
+      "ckb-balance":"CKB可用余额:",
+      "no-data":"未查到相关记录",
+      "request-failed":"请求失败，请检查网络连接并稍后重试",
+      "tx-pending":"交易正在上链...",
+      "tx-successful":"交易成功!!",
+      "recommended":"推荐",
+      "latest-block":"最新区块高度",
+      "or":" 或者 ",
+      "note":"温馨提醒",
+      "loading":"数据加载中...",
+      "goto-page":"跳到",
+      "page":"页",
+      "you":"你"
+    },
+    "toast": {},
+    "alert": {
+      "yes": "是",
+      "confirm":"确认",
+      "cancel": "取消",  
+      "ok": "好"
+    },
+    "nav": {
+
+    },
+    "page-title": {
+
+    },
+    "account": {
+      "title": "Account",
+      "send": "Send",
+      "receive": "Receive",
+      "balance": "可用余额",
+      "deposit": "去存入 CKB",
+      "buy-ckb": "买 CKB",
+      "transfer":"Transfer",
+      "disconnect":"断开连接",
+      "sign-out": "Sign out",
+      "sign-in": "Connect ",
+      "copied": "Copied",
+      "claim-faucet":"去水龙头领点CKB来测试"
+    },
+    "network-fee": {
+      "title":"选择你愿意支付的最大交易费用:",
+      "low": "低",
+      "avg": "平均",
+      "high": "高",
+      "fee-unit": "shannons/kB",
+      "transaction-fee":"交易费",
+      "total": "合计",
+      "balance-error":"CKB可用余额不足，请充值。",
+      "balance-error-tip":"在付款之前，请确保您的 CKB 余额大于 {{min_balance}} CKB。付款后，剩余金额不得少于 {{min_remain}} CKB。否则，将无法发送交易。"
+    },
+    "wallet": {
+      "title":"钱包",
+      "connect-wallet": "选择钱包",
+      "connected":"已连接",
+      "external-address":"账号/地址",
+      "wallet-joyid": "JoyID",
+      "wallet-metamask": "MetaMask",
+      "wallet-unisat": "Unisat",
+      "wallet-okx": "OKX",
+      "wallet-okxevm": "OKX"
+    },
+
+    "trans": {
+      "wallet-balance":"CKB 可用余额",
+      "send":"发送",
+      "receive":"接收",
+      "send-ckb":"发送 CKB",
+      "receive-ckb":"接收 CKB",
+      "history":"交易记录",
+      "address-invalid":"请输入正确的接收方 CKB 地址（以ckb打头）",
+      "address-required":"请输入接收方的 CKB 地址（以ckb打头）",
+      "address-self":"你确定要转给自己吗？",
+      "capacity-not-enough":"你需要预留大于 {{limit}} CKB）来存储交易后的余额，或者点击 'Max' 按钮发送全部余额。",
+      "live-capacity-not-enough": "可用余额不足。",
+      "amount-required":"请输入正确的金额",
+      "amount-less-100":"如果你正在向交易所转账，请注意交易所的最小充值额度限制",
+      "capacity-too-small": "根据接收方的地址，最小转账金额为 {{bytes}} CKB。",
+      "decimal-out-limit":"小数点后数字位数超出限制, 最大为 8 位",
+      "alert-send-all-content-1":"剩余余额过低",
+      "alert-send-all-content-2":"（小于 {{limit}} CKB）",
+      "alert-send-all-content-3":"，无法发送交易。",
+      "alert-send-all-content-4":"你确定要发送全部 ",
+      "pending-activity":"待确认的交易",
+      "tx-status-unknown":"等待中",
+      "tx-status-pending":"等待中",
+      "tx-status-committed":"交易已提交",
+      "tx-status-rejected":"交易被拒绝",
+      "tip-unconnect-wallet":"请连接钱包操作",
+      "show-qrcode":"显示二维码",
+      "deposit-suggest":"部分钱包和交易所可能无法识别此地址。推荐使用 ",
+      "from":"来自",
+      "to":"发往",
+      "amount":"金额",
+      "max":"全部"
+    }
+    
+  }
+}

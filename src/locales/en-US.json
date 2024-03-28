@@ -1,0 +1,127 @@
+{
+  "translation": {
+    "common": {
+      "slogan":"Let's CookCKB!",
+      "slogan-desc":"Just like cooking a delicious meal, creating CKB applications requires the right ingredients and recipes.",
+      "tutorial": "Tutorial",
+      "learn-more": "Learn more",
+      "coming-soon": "Coming soon",
+      "connect-wallet":"Connect",
+      "confirmation":"Confirmation",
+      "continue":"Continue",
+      "close":"Close",
+      "finish":"Finish",
+      "next":"Next",
+      "back":"Back",
+      "items":"Items",
+      "remove-all":"Remove All",
+      "submit-pay":"Submit",
+      "ckb-balance":"Free CKB Balance:",
+      "no-data":"No results found",
+      "request-failed":"Request failed. Check your network connection and try again later",
+      "tx-pending":"Transaction Pending...",
+      "tx-successful":"Transaction Succsessful!!",
+      "recommended":"Recommended",
+      "latest-block":"Latest Block",
+      "or":" or ",
+      "note": "Note",
+      "loading":"Loading ...",
+      "goto-page":"Go to",
+      "page":"Page",
+      "you":"You"
+    },
+    "toast": {},
+    "alert": {
+      "yes": "YES",
+      "confirm":"Confirm",
+      "cancel": "Cancel",
+      "ok": "OK"
+    },
+    "nav": {
+      "home":"Home",
+      "basic-tutorials":"Basic Tutorials",
+      "basic": {
+        "connect-wallets":"Connect Wallets"
+      },
+      "spore-tutorials":"Spore",
+      "spore": {
+        "create-spore":"Create Spore"
+      }
+      
+    },
+    "page-title": {
+
+    },
+    "account": {
+      "title": "Account",
+      "send": "Send",
+      "receive": "Receive",
+      "balance": "Balance",
+      "deposit": "Deposit",
+      "buy-ckb": "Buy CKB",
+      "transfer":"Transfer",
+      "disconnect":"Disconnect",
+      "sign-out": "Sign out",
+      "sign-in": "Connect ",
+      "copied": "Copied",
+      "claim-faucet":"CKB Faucet"
+    },
+    "network-fee": {
+      "title":"Choose the maximum transaction fee you wish to pay:",
+      "low": "Low",
+      "avg": "Average",
+      "high": "High",
+      "fee-unit": "shannons/kB",
+      "transaction-fee":"Transaction Fee",
+      "total": "Total",
+      "balance-error":"Insufficient balance.",
+      "balance-error-tip":"Before payment, please ensure that your CKB Balance is greater than {{min_balance}} CKB. After payment, the remaining amount must not be less than {{min_remain}} CKB. Otherwise, the transaction can not be sent."
+    },
+    "wallet": {
+      "title":"Wallet",
+      "connect-wallet": "Choose Wallet",
+      "connected":"Connected",
+      "external-address":"Account/Address",
+      "wallet-joyid": "JoyID",
+      "wallet-metamask": "MetaMask",
+      "wallet-unisat": "Unisat",
+      "wallet-okx": "OKX",
+      "wallet-okxevm": "OKX"
+    },
+    
+    "trans": {
+      "wallet-balance":"Free CKB Balance",
+      "send":"Send",
+      "receive":"Receive",
+      "send-ckb":"Send CKB",
+      "receive-ckb":"Receive CKB",
+      "history":"Activity",
+      "address-invalid":"Invalid CKB address（ckb....）",
+      "address-required":"CKB address is required (ckb...）",
+      "address-self":"Are you sure you want to transfer to yourself?",
+      "capacity-not-enough":"The remaining balance is too low(less than {{limit}} CKB）to send a transaction,  or click 'Max' button to send all your balance.",
+      "live-capacity-not-enough": "Insufficient available balance",
+      "amount-required":"Amount is required",
+      "amount-less-100": "If you are transferring funds to an exchange, please be aware of the minimum deposit limit set by the exchange.",
+      "capacity-too-small": "Depending on the recipient's address, the minimum sending amount is {{bytes}} CKB",
+      "decimal-out-limit":"The number of digits after the decimal point exceeds the limit, the maximum is 8 digits.",
+      "alert-send-all-content-1":"The remaining balance is too low",
+      "alert-send-all-content-2":"(less than {{limit}} CKB）",
+      "alert-send-all-content-3":"to send a transaction.",
+      "alert-send-all-content-4":"Do you want to send all ",
+      "pending-activity":"Pending Activity",
+      "tx-status-unknown":"Waiting",
+      "tx-status-pending":"Pending",
+      "tx-status-committed":"Committed",
+      "tx-status-rejected":"Rejected",
+      "tip-unconnect-wallet":"Please connect wallet",
+      "show-qrcode":"Show QR Image",
+      "deposit-suggest":"Some wallets and exchanges may not accept this address. For smooth deposits, use",
+      "from":"From",
+      "to":"To",
+      "amount":"Amount",
+      "max":"Max"
+    }
+
+  }
+}

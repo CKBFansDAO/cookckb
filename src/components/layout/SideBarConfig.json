@@ -1,0 +1,31 @@
+[
+    {
+        "display_name": "nav.home",
+        "route": "/",
+        "icon": "🍳"
+    },
+    {
+        "display_name": "nav.basic-tutorials",
+        "route": "/basic_tutorials",
+        "icon": "🍱",
+        "items": [
+            {
+                "display_name": "nav.basic.connect-wallets",
+                "route": "/basic_tutorials/connect_wallets",
+                "icon": "🥗"
+            }
+        ]
+    },
+    {
+        "display_name": "nav.spore-tutorials",
+        "route": "/spore",
+        "icon": "🍄",
+        "items": [
+            {
+                "display_name": "nav.spore.create-spore",
+                "route": "/spore/create_spore",
+                "icon": "🥘"
+            }
+        ]
+    }
+]
