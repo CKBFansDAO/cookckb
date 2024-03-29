@@ -44,17 +44,17 @@
 
     },
     "account": {
-      "title": "Account",
-      "send": "Send",
-      "receive": "Receive",
+      "title": "账号",
+      "send": "发送",
+      "receive": "接收",
       "balance": "可用余额",
       "deposit": "去存入 CKB",
       "buy-ckb": "买 CKB",
-      "transfer":"Transfer",
+      "transfer":"转账 CKB",
       "disconnect":"断开连接",
-      "sign-out": "Sign out",
-      "sign-in": "Connect ",
-      "copied": "Copied",
+      "sign-out": "断开连接",
+      "sign-in": "连接钱包",
+      "copied": "已复制",
       "claim-faucet":"去水龙头领点CKB来测试"
     },
     "network-fee": {

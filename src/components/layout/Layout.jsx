@@ -1,7 +1,9 @@
 import React from 'react';
 import SideBar from './SideBar';
 import MainView from './MainView';
-import { BrowserRouter } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import '../../assets/css/toastify_override.css'
 
 const Layout = () => {
     return (
@@ -9,9 +11,10 @@ const Layout = () => {
             <div className='fixed w-60 h-full'>
                 <SideBar></SideBar>
             </div>
-            <div className='pl-60 p-5'>
+            <div className='pl-60 flex w-full justify-center'>
                 <MainView></MainView>
             </div>
+            <ToastContainer/>
         </div>
     );
 }

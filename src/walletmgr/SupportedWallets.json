@@ -1,0 +1,60 @@
+{
+    "chains":[
+        {
+            "key":"bitcoin",
+            "displayName":"Bitcoin",
+            "logo":"bitcoin-logo.svg",
+            "bg":"",
+            "enable":true
+        },
+        {
+            "key":"ethereum",
+            "displayName":"Ethereum",
+            "logo":"ethereum-logo.svg",
+            "bg":"",
+            "enable":true
+        }
+    ],
+    "wallets":[
+    {
+        "walletName":"joyid",
+        "displayName":"JoyID",
+        "chain":"ckb",
+        "logo":"logo-wallet-joyid.svg",
+        "bg":"bg-black",
+        "enable":true
+    },
+    {
+        "walletName":"metamask",
+        "displayName":"MetaMask",
+        "chain":"ethereum",
+        "logo":"logo-wallet-metamask.svg",
+        "bg":"bg-[#000]",
+        "enable":true
+    },
+    {
+        "walletName":"okxevm",
+        "displayName":"OKX EVM",
+        "chain":"ethereum",
+        "logo":"logo-wallet-okx.svg",
+        "bg":"bg-black",
+        "enable": true
+    },
+    {
+        "walletName":"unisat",
+        "displayName":"UniSat",
+        "chain":"bitcoin",
+        "logo":"logo-wallet-unisat.svg",
+        "bg":"bg-black",
+        "enable": true
+    },
+    {
+        "walletName":"okx",
+        "displayName":"OKX Bitcoin",
+        "chain":"bitcoin",
+        "logo":"logo-wallet-okx.svg",
+        "bg":"bg-black",
+        "enable": true
+    }
+    ]
+}

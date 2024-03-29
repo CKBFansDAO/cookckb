@@ -11,6 +11,7 @@ import './assets/fontawesome/css/fontawesome.css';
 import './assets/fontawesome/css/brands.css';
 import './assets/fontawesome/css/solid.css';
 import { BrowserRouter } from 'react-router-dom';
+import { WalletProvider } from './walletmgr/WalletContext';
 
 
 
@@ -24,11 +25,12 @@ const initLanguage = () => {
 initLanguage();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Layout />
+      <WalletProvider>
+        <Layout />
+      </WalletProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

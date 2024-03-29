@@ -38,7 +38,7 @@ const SidebarItem = ({ item, isSubItem, active }) => {
 
     return (
         <div className="flex flex-col gap-2 cursor-pointer">
-            <div onClick={handleItemClick} className={`hover:bg-slate-200 p-2 rounded flex w-full items-center ${active ? 'bg-slate-100' : ''}`}>
+            <div onClick={handleItemClick} className={`hover:bg-slate-200 p-2 rounded flex w-full items-center ${active ? 'bg-slate-100 font-bold' : ''}`}>
                 <span className={`${isSubItem ? 'ml-4' : ''} text-[20px]`}>{t(item.icon)}</span>
                 <span className='ml-2 grow'>{t(item.display_name)}</span>
                 {item.items && (expanded ? <i className="fa-solid fa-angle-right place-self-center rotate-90"></i> : <i className="fa-solid fa-angle-right place-self-center"></i>)}
