@@ -7,7 +7,7 @@ import { useNavigate, BrowserRouter, useLocation } from 'react-router-dom';
 const SidebarItem = ({ item, isSubItem, active }) => {
     const [t] = useTranslation();
     const navigate = useNavigate();
-    const [expanded, setExpanded] = useState(false);
+    const [expanded, setExpanded] = useState(true);
 
     const location = useLocation()
 
