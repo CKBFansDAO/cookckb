@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --app-color-prime: #733DFF;
+  --app-color-second: #8F67FF;
+}
+
 body {
   margin: 0;
   font-family: "Montserrat", monospace, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -18,11 +23,64 @@ code {
     monospace;
 }
 
+input {
+  border: 1px solid transparent;
+  outline: 0;
+}
+
+input:focus {
+  border: 1px solid var(--app-color-prime);
+}
+
+input:hover {
+  border: 1px solid var(--app-color-second);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    margin: 0;
+}
+
+textarea {
+  border: 1px solid transparent;
+  outline: 0;
+}
+
+textarea:focus {
+  border: 1px solid var(--app-color-prime);
+}
+
+textarea:hover {
+  border: 1px solid var(--app-color-second);
+}
+
+textarea::-webkit-outer-spin-button,
+textarea::-webkit-inner-spin-button {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    margin: 0;
+}
+
 .title {
   font-family: "Archivo Black", sans-serif;
   font-weight: 400;
 }
 
+.bg-prime {
+  background-color: var(--app-color-prime);
+}
+
+.bg-second {
+  background-color: var(--app-color-second);
+}
+
+.listitem:hover {
+  background-color: var(--app-color-second);
+}
 
 .app-mask {
   box-sizing: border-box;

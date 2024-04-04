@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Balance" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Balance_index" transform="translate(-710.000000, -724.000000)">
+            <g id="Inscribe" transform="translate(660.000000, 171.000000)">
+                <g id="icon_send" transform="translate(50.000000, 553.000000)">
+                    <circle fill="#50F412" cx="18" cy="18" r="18"></circle>
+                    <path d="M25,25 L25,28 L11,28 L11,25 L25,25 Z M18,8 L25,15.4733096 L22.6389549,18 L20,15.166 L20,23 L16,23 L16,15.165 L13.3610451,18 L11,15.4733096 L18,8 Z" fill="#17191D" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

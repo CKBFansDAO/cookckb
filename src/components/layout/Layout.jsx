@@ -4,18 +4,31 @@ import MainView from './MainView';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../../assets/css/toastify_override.css'
+import {
+    QueryClient,
+    QueryClientProvider,
+} from '@tanstack/react-query'
+import Footer from '../footer/Footer';
+
+const queryClient = new QueryClient();
 
 const Layout = () => {
-    return (
+    return (<QueryClientProvider client={queryClient}>
         <div className='flex w-full min-h-screen'>
             <div className='fixed w-60 h-full'>
                 <SideBar></SideBar>
             </div>
-            <div className='pl-60 flex w-full justify-center'>
-                <MainView></MainView>
+            <div className='pl-60 flex flex-col w-full justify-center'>
+                <div className="flex py-20 grow w-full min-w-full justify-center">
+                    <MainView />
+                </div>
+                <Footer />
             </div>
-            <ToastContainer/>
+
+            <ToastContainer />
+            <div id="app-message-box" />
         </div>
+    </QueryClientProvider>
     );
 }
 

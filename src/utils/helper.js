@@ -1,3 +1,4 @@
+import JSBI from "jsbi";
 import { toast } from "react-toastify";
 
 
@@ -37,6 +38,32 @@ export const showError = (error) => {
     });
 }
 
+export function showSuccessToast(content) {
+    toast?.success(content, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        theme: 'light',
+        progress: undefined,
+    });
+}
+
+export function showWarnToast(content) {
+    toast?.warn(content, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: 'light',
+        progress: undefined,
+    });
+}
+
 export function formatAddress(address, visibleLength = 3) {
     if (!address) {
         return '---';
@@ -51,4 +78,34 @@ export function formatAddress(address, visibleLength = 3) {
     let str = begin + '...' + end;
 
     return str;
+}
+
+export function formatNumberWithCommas(number) {
+    const parts = number.toString().split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+    return parts.join(".");
+}
+
+
+export const getDisplayNumber = (srcNumber, decimal) => {
+    if (isNaN(srcNumber) || isNaN(decimal) || srcNumber === null || srcNumber === undefined) {
+        return '---';
+    }
+
+    if (!decimal || decimal == 0) {
+        return formatNumberWithCommas(srcNumber.toString());
+    }
+
+    const number = JSBI.BigInt(srcNumber);
+    const decimals = JSBI.BigInt(Math.pow(10, decimal));
+    const value = JSBI.divide(number, decimals);
+
+    const fraction = JSBI.remainder(number, decimals);
+  
+    const formattedDecimalPart = (!JSBI.equal(fraction, JSBI.BigInt(0))) ? `.${fraction.toString().padStart(decimal, "0")}` : '';
+    const displayValue = `${value.toString()}${formattedDecimalPart}`
+
+
+    return formatNumberWithCommas(displayValue);
 }

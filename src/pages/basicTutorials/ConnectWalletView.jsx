@@ -44,11 +44,11 @@ const ConnectWalletView = () => {
             return <></>
         }
 
-        return <div className='flex flex-col gap-5 bg-slate-300 p-5'>
-            <div className='flex gap-2 items-center justify-between'>
+        return <div className='flex flex-col gap-5 bg-[#FAFAFB] shadow-[0_0_10px_0px_rgba(0,0,0,0.3)] p-5 rounded'>
+            <div className='flex gap-14 items-center justify-between'>
                 <div className='flex gap-2 items-center'>
-                    <i class="fa-solid fa-wallet fa-lg mr-2"></i>
-                    <span className=''>{t('wallet.title')}</span>
+                    <i class="fa-solid fa-wallet fa-lg"></i>
+                    <span className='font-semibold'>{t('wallet.title')}</span>
                 </div>
                 <span className='text-[#733DFF]'>{t(`wallet.wallet-${connectedInfo.type}`)} {t(`wallet.connected`)}</span>
             </div>

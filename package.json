@@ -3,17 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@ckb-lumos/bi": "^0.21.1",
-    "@ckb-lumos/ckb-indexer": "^0.21.1",
-    "@ckb-lumos/common-scripts": "^0.21.1",
-    "@ckb-lumos/config-manager": "^0.21.1",
-    "@ckb-lumos/helpers": "^0.21.1",
-    "@ckb-lumos/rpc": "^0.21.1",
+    "@ckb-lumos/bi": "^0.22.0-next.5",
+    "@ckb-lumos/ckb-indexer": "^0.22.0-next.5",
+    "@ckb-lumos/common-scripts": "^0.22.0-next.5",
+    "@ckb-lumos/config-manager": "^0.22.0-next.5",
+    "@ckb-lumos/helpers": "^0.22.0-next.5",
+    "@ckb-lumos/rpc": "^0.22.0-next.5",
     "@joyid/ckb": "^0.0.6",
     "@nervosnetwork/ckb-sdk-utils": "^0.109.1",
+    "@tanstack/react-query": "^5.28.9",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "bignumber.js": "^9.1.2",
     "i18next": "^23.10.1",
     "jsbi": "^4.3.0",
     "react": "^18.2.0",
@@ -27,9 +29,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -49,5 +51,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "react-app-rewired": "^2.2.1"
   }
 }

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { initLumos } from './utils/lumos';
+import { initLumos, updateScript } from './utils/lumos';
 import { changeLanguage, currentLanguage } from './utils/i18n';
 import Layout from './components/layout/Layout';
 
@@ -14,7 +14,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { WalletProvider } from './walletmgr/WalletContext';
 
 
-
+await updateScript();
 initLumos();
 
 const initLanguage = () => {

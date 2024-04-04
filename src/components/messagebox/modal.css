@@ -1,0 +1,26 @@
+.modal__backdrop {
+    position: absolute;
+    top: 0;
+    height: max-content;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .modal__wrapper {
+    position: relative;
+    border: 1px solid black;
+    background: white;
+    width: 400px;
+    padding: 20px;
+  }
+  .modal__close {
+    cursor: pointer;
+  }
+  .modal__close:hover {
+    color: red;
+  }
+  .modal__content {
+    padding: 20px;
+  }
+  

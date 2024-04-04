@@ -1,9 +1,9 @@
 import {
     initializeConfig,
     createConfig,
- //   predefined,
- //   createRpcResolver,
- //   refreshScriptConfigs
+    //   predefined,
+    createRpcResolver,
+    refreshScriptConfigs
 } from '@ckb-lumos/config-manager'
 import { RPC } from '@ckb-lumos/rpc'
 import { Indexer } from '@ckb-lumos/ckb-indexer'
@@ -14,9 +14,23 @@ import { hexToBytes } from '@nervosnetwork/ckb-sdk-utils'
 import appConfig from '../appConfig';
 
 export const rpc = new RPC(appConfig.CKB.CKB_RPC_URL);
-const indexer = new Indexer(appConfig.CKB.CKB_INDEXER_URL, appConfig.CKB.CKB_RPC_URL);
+export const indexer = new Indexer(appConfig.CKB.CKB_INDEXER_URL, appConfig.CKB.CKB_RPC_URL);
 
 export const CKB_DECIMAL = BI.from(10 ** 8);
+
+export async function updateScript() {
+    if (appConfig.APP.IS_MAINNET) {
+        return;
+    }
+
+    const outdatedConfig = appConfig.CKB.SCRIPTS;
+
+    const refreshed = await refreshScriptConfigs(outdatedConfig, {
+        resolve: createRpcResolver(rpc),
+    });
+
+    appConfig.CKB.SCRIPTS = refreshed;
+}
 
 export async function initLumos() {
     //console.log('lumos init');
@@ -75,7 +89,7 @@ export const calcXudtCapacity = (address, isReserve = true) => {
     const xudtDataSize = 16;
     let cellSize = lockSize + xudtTypeSize + capacitySize + xudtDataSize;
     if (isReserve) {
-      cellSize += 1;
+        cellSize += 1;
     }
 
     const capacity = JSBI.multiply(JSBI.BigInt(cellSize), JSBI.BigInt(10000_0000));

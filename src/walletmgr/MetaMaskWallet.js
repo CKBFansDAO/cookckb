@@ -116,7 +116,6 @@ export default class MetaMaskWallet extends IWallet {
                 chain: 'ethereum',
                 externalAddress: ethAddr
             };
-            console.log('MetaMask connected');
         } catch (error) {
             showError(error);
         }

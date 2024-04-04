@@ -13,6 +13,11 @@
                 "display_name": "nav.basic.connect-wallets",
                 "route": "/basic_tutorials/connect_wallets",
                 "icon": "🥗"
+            },
+            {
+                "display_name": "nav.basic.transfer-ckb",
+                "route": "/basic_tutorials/transfer_ckb",
+                "icon": "🥪"
             }
         ]
     },
