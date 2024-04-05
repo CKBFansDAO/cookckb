@@ -55,6 +55,11 @@
     "page-title": {
 
     },
+    "home":{
+      "get-start":"Cook it",
+      "learn-more":"Document",
+      "popular-recipes":"Popular Recipes"
+    },
     "account": {
       "title": "Account",
       "send": "Send",
@@ -91,8 +96,9 @@
       "wallet-okx": "OKX",
       "wallet-okxevm": "OKX"
     },
-    
     "trans": {
+      "send-to":"Send to",
+      "ckb-address":"CKB address",
       "wallet-balance":"Free CKB Balance",
       "send":"Send",
       "receive":"Receive",

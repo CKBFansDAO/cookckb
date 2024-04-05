@@ -19,6 +19,7 @@ import appConfig from '../../appConfig';
 import { useCKBBalance } from '../../hooks/useCKBBalance';
 import { useFeeRate } from '../../hooks/useFeeRate';
 import { signTransaction } from '@joyid/ckb';
+import TitleBar from '../../components/titleBar/TitleBar';
 
 const TransferCKBView = () => {
 
@@ -405,18 +406,19 @@ const TransferCKBView = () => {
     return (
         <div className='bg-[#FAFAFB] shadow-[0_0_5px_0px_rgba(49,56,70,0.3)] w-full md:w-[600px] flex flex-col gap-10 py-8 md:py-12 px-8 md:px-10 rounded-xl'>
             <div className="flex flex-col inscription gap-4">
-                <span className='text-[#777777]'>{t('Send to')}:</span>
+                <TitleBar title={t('nav.basic.transfer-ckb')}></TitleBar>
+                <span className='text-[#777777]'>{t('trans.send-to')}:</span>
                 <textarea className="w-full break-all text-left border border-[#777] bg-gray-100 rounded px-5 py-3 h-24"
                     type="text"
                     onChange={handleAddressChanged}
                     value={sendToAddress}
-                    placeholder={t('ckb address')} />
+                    placeholder={t('trans.ckb-address')} />
                 {checkAddressRes.hasError && <span className='text-red-500 -mt-2 text-sm'>{checkAddressRes.error}</span>}
                 {checkAddressRes.hasWarning && <span className='text-yellow-500 -mt-2 text-sm'>{checkAddressRes.error}</span>}
             </div>
             <div className="flex flex-col inscription gap-4">
                 <div className='flex justify-between'>
-                    <span className='text-[#777777]'>{t('Amount')}:</span>
+                    <span className='text-[#777777]'>{t('trans.amount')}:</span>
                     <div className='text-color-main flex gap-1 items-center'>{t('Max')}:{isLoadingBalance ? <div className='animate-pulse'><div className='h-5 w-40 bg-[#333333] rounded-full'></div></div>
                         : <span className='text-color-main underline underline-offset-2 cursor-pointer' onClick={() => setAmount(balance)}>{balance} CKB</span>}</div>
                 </div>

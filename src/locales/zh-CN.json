@@ -2,7 +2,7 @@
   "translation": {
     "common": {
       "slogan":"一起 CookCKB 吧!",
-      "slogan-desc":"就像烹饪一道美味的佳肴一样，创造 CKB 应用也需要正确的配料和菜谱",
+      "slogan-desc":"就像烹饪一道美味的佳肴一样，开发 CKB 应用也需要正确的配料和菜谱。",
       "tutorial": "教程",
       "learn-more": "了解更多",
       "coming-soon": "敬请期待",
@@ -55,6 +55,11 @@
     "page-title": {
 
     },
+    "home":{
+      "get-start":"上菜",
+      "learn-more":"阅读文档",
+      "popular-recipes":"热门菜谱"
+    },
     "account": {
       "title": "账号",
       "send": "发送",
@@ -91,8 +96,9 @@
       "wallet-okx": "OKX",
       "wallet-okxevm": "OKX"
     },
-
     "trans": {
+      "send-to":"发往",
+      "ckb-address":"CKB 地址",
       "wallet-balance":"CKB 可用余额",
       "send":"发送",
       "receive":"接收",
