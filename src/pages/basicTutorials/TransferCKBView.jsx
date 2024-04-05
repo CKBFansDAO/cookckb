@@ -45,7 +45,7 @@ const TransferCKBView = () => {
         return <div className='flex flex-col justify-center items-center gap-5'>
             <OopsIcon></OopsIcon>
             <span className='title text-lg'>{t('common.connect-first')}</span>
-            <div class="cursor-pointer h-[36px] border border-opacity-50 border-[#733DFF] hidden font-semibold rounded-md px-4 md:flex items-center"
+            <div class="cursor-pointer h-[36px] border border-opacity-50 border-color-main hidden font-semibold rounded-md px-4 md:flex items-center"
                 onClick={() => setWalletSelectorOpen(true)}>
                 <i class="fa-solid fa-wallet fa-lg mr-2"></i>{t('common.connect-wallet')}
             </div>
@@ -347,7 +347,7 @@ const TransferCKBView = () => {
 
     const renderConfirm = (amount) => {
         return <div className='flex flex-col -mt-2 gap-2 text-white'>
-            <span className='text-[#000]'>{t('trans.from')}</span>
+            <span className='text-[#777]'>{t('trans.from')}</span>
             <span className='-mt-2 text-sm break-all'>{connectedInfo.address}</span>
             <span className='text-[#777]'>{t('trans.to')}</span>
             <span className='-mt-2 text-sm break-all'>{sendToAddress}</span>
@@ -376,28 +376,28 @@ const TransferCKBView = () => {
         }
 
         return <a href={`${appConfig.CKB.CKB_EXPLORER_URL}/transaction/${tx}`} target="_blank" rel="noopener noreferrer"
-            className='flex flex-col w-full gap-6 hover:bg-[#202228]'>
+            className='flex flex-col w-full gap-6 hover:bg-gray-200 rounded'>
             <div className="flex gap-2 p-2">
                 <div className="flex h-12 w-7 justify-center items-center">
-                    <div className="flex justify-center items-center h-7 w-7 bg-[#50F412] rounded-full">
+                    <div className="flex justify-center items-center h-7 w-7 bg-color-main rounded-full">
                         {success ? <SentIcon></SentIcon> : <PendingIcon></PendingIcon>}
                     </div>
                 </div>
                 <div className="flex flex-col w-full gap-1">
                     <div className="flex gap-2 w-full">
-                        <span className="text-[#50F412]">{t('trans.send')}</span>
+                        <span className="text-color-main">{t('trans.send')}</span>
                         <div className="grow"></div>
                         <div className="flex justify-end items-center">
-                            <div className="rounded-full text-xs font-semibold px-4 h-4 flex items-center justify-center bg-[#50F412] text-black ">{t(`trans.tx-status-${txStatus}`)}</div>
+                            <div className="rounded-full text-xs font-semibold px-4 h-4 flex items-center justify-center bg-color-main text-white ">{t(`trans.tx-status-${txStatus}`)}</div>
                         </div>
                     </div>
                     <div className="flex gap-2 text-sm whitespace-nowrap">
                         <div className='flex gap-2'>
-                            <span className='text-[#BBBBBB]'> {getDisplayNumber(amount, 0)} </span>
+                            <span className='text-[#777]'> {getDisplayNumber(amount, 0)} </span>
                             <span>CKB</span>
                         </div>
 
-                        <span className="text-right whitespace-nowrap w-full text-[#AAAAAA]">{txTime ? new Date(txTime).toLocaleString() : ""}</span>
+                        <span className="text-right whitespace-nowrap w-full text-[#777]">{txTime ? new Date(txTime).toLocaleString() : ""}</span>
                     </div>
                 </div>
             </div>
@@ -419,8 +419,8 @@ const TransferCKBView = () => {
             <div className="flex flex-col inscription gap-4">
                 <div className='flex justify-between'>
                     <span className='text-[#777777]'>{t('Amount')}:</span>
-                    <div className='text-[#733DFF] flex gap-1 items-center'>{t('Max')}:{isLoadingBalance ? <div className='animate-pulse'><div className='h-5 w-40 bg-[#333333] rounded-full'></div></div>
-                        : <span className='text-[#733DFF] underline underline-offset-2 cursor-pointer' onClick={() => setAmount(balance)}>{balance} CKB</span>}</div>
+                    <div className='text-color-main flex gap-1 items-center'>{t('Max')}:{isLoadingBalance ? <div className='animate-pulse'><div className='h-5 w-40 bg-[#333333] rounded-full'></div></div>
+                        : <span className='text-color-main underline underline-offset-2 cursor-pointer' onClick={() => setAmount(balance)}>{balance} CKB</span>}</div>
                 </div>
                 <input className="w-full text-left border border-[#777] bg-gray-100 rounded px-5 py-3"
                     type="text"
@@ -432,7 +432,7 @@ const TransferCKBView = () => {
                 {checkAmountRes.hasWarning && <span className='text-yellow-500 -mt-2 text-sm'>{checkAmountRes.error}</span>}
             </div>
             <div className='flex justify-end'>
-                <button className='flex justify-center bg-[#733DFF] hover:bg-[#5022c4] cursor-pointer text-white w-[120px] md:w-[200px] text-center rounded-full py-2 disabled:bg-[#777777] disabled:cursor-not-allowed'
+                <button className='flex justify-center bg-color-main hover:bg-color-second cursor-pointer text-white w-[120px] md:w-[200px] text-center rounded-full py-2 disabled:bg-[#777777] disabled:cursor-not-allowed'
                     disabled={!canSend()}
                     onClick={onSendCKB}>
                     <div className='flex gap-2'>

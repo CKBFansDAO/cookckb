@@ -15,15 +15,15 @@ const Home = () => {
                     <span class="title font-bold text-center text-[40px] md:text-[50px]">{t('common.slogan')}</span>
                     <p class="text-[20px] md:text-[24px]">{t('common.slogan-desc')}</p>
                     <div class="flex md:mt-10 justify-center gap-5 md:gap-10">
-                        <Link class="flex justify-center" to="basic_tutorials/connect_wallets"><div class="flex h-10 cursor-pointer items-center justify-center rounded-full bg-[#733dff] px-3 md:px-10 py-1 text-sm font-semibold  hover:opacity-90 text-[#EEE] md:text-xl">Get Started</div></Link>
-                        <a href="https://docs.cookckb.dev" target="_blank" rel="noopener noreferrer" class="flex justify-center"><div class="flex h-10 cursor-pointer items-center justify-center rounded-full border border-[#733dff] px-3 md:px-10 py-1 text-sm font-semibold text-[#733dff]  hover:opacity-90 md:text-xl">Learn More &gt;</div></a>
+                        <Link class="flex justify-center" to="basic_tutorials/connect_wallets"><div class="flex h-10 cursor-pointer items-center justify-center rounded-full bg-color-main px-3 md:px-10 py-1 text-sm font-semibold  hover:opacity-90 text-[#EEE] md:text-xl">Get Started</div></Link>
+                        <a href="https://docs.cookckb.dev" target="_blank" rel="noopener noreferrer" class="flex justify-center"><div class="flex h-10 cursor-pointer items-center justify-center rounded-full border border-color-main px-3 md:px-10 py-1 text-sm font-semibold text-color-main  hover:opacity-90 md:text-xl">Learn More &gt;</div></a>
                     </div>
                 </div>
                 <div className='grow'>
                     <HeroImage className='w-full place-self-center' />
                 </div>
             </div>
-            <div className='flex flex-col bg-[#733DFF] bg-opacity-5 -mx-10 p-10 md:py-24 -mb-20 justify-center gap-10'>
+            <div className='flex flex-col bg-color-main bg-opacity-5 -mx-10 p-10 md:py-24 -mb-20 justify-center gap-10'>
                 <div className='title font-bold text-center text-[40px] md:text-[50px]'> Popular Recipes
                 </div> 
                 <span className='title text-center text-gray-700'>{t("common.coming-soon")}...</span>

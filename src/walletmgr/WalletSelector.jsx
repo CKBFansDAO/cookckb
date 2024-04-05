@@ -73,7 +73,7 @@ const WalletSelector = () => {
             {
                 supportedWallets.chains.map((chain) => {
                     return (
-                        chain.enable && <div key={chain.key} className={`flex gap-2 cursor-pointer hover:text-white border-[#50F412] ${selectedChain === chain.key ? 'border-b-[2px] text-white' : ''}`}
+                        chain.enable && <div key={chain.key} className={`flex gap-2 cursor-pointer hover:text-white border-color-main ${selectedChain === chain.key ? 'border-b-[2px] text-white' : ''}`}
                             onClick={() => setSelectedChain(chain.key)}>
                             {<img src={`../images/chains/${chain.logo}`} alt={chain.displayName} className="w-5 h-5" />}
                             <span>{chain.displayName}</span>

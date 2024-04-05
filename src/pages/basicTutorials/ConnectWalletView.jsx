@@ -23,7 +23,7 @@ const ConnectWalletView = () => {
 
     const renderConnectBtn = () => {
         if (!connectedInfo) {
-            return <div class="cursor-pointer h-[36px] border border-opacity-50 border-[#733DFF] hidden font-semibold rounded-md px-4 md:flex items-center"
+            return <div class="cursor-pointer h-[36px] border border-opacity-50 border-color-main hidden font-semibold rounded-md px-4 md:flex items-center"
                 onClick={() => setWalletSelectorOpen(true)}>
                 <i class="fa-solid fa-wallet fa-lg mr-2"></i>{t('common.connect-wallet')}
             </div>
@@ -31,10 +31,10 @@ const ConnectWalletView = () => {
 
         return <div className='h-[36px] text-black font-semibold rounded-md cursor-pointer flex items-center'
             onClick={() => { setConnectInfoVisible(!showConnectedInfo) }}>
-            <div className='flex h-full items-center px-2 rounded-md border border-opacity-50 border-[#733DFF]'>
+            <div className='flex h-full items-center px-2 rounded-md border border-opacity-50 border-color-main'>
                 {<img src={`../images/wallets/logo-wallet-${connectedInfo.type}.svg`} alt={connectedInfo.type} className="w-5 h-5" />}
 
-                <span className='hidden md:block text-[#733DFF] md:ml-3 inscription'>{formatAddress(connectedInfo.externalAddress, 6)}</span>
+                <span className='hidden md:block text-color-main md:ml-3 inscription'>{formatAddress(connectedInfo.externalAddress, 6)}</span>
             </div>
         </div>
     }
@@ -50,7 +50,7 @@ const ConnectWalletView = () => {
                     <i class="fa-solid fa-wallet fa-lg"></i>
                     <span className='font-semibold'>{t('wallet.title')}</span>
                 </div>
-                <span className='text-[#733DFF]'>{t(`wallet.wallet-${connectedInfo.type}`)} {t(`wallet.connected`)}</span>
+                <span className='text-color-main'>{t(`wallet.wallet-${connectedInfo.type}`)} {t(`wallet.connected`)}</span>
             </div>
             {connectedInfo.chain !== 'ckb' && <div className='pl-[26px] flex justify-between items-center'>
                 <div className='flex gap-2 items-center'>
@@ -74,8 +74,8 @@ const ConnectWalletView = () => {
                     </CopyToClipboard>
                 </div>
             </div>
-            <div className='border-b border-[#333]'></div>
-            <div className='flex justify-between items-center cursor-pointer px-3 py-2 hover:bg-slate-200 rounded -mx-3 -my-2'
+            <div className='border-b border-color-main opacity-35'></div>
+            <div className='flex justify-between items-center cursor-pointer px-3 py-2 hover:bg-color-main hover:text-white ease-in duration-300 rounded -mx-3 -my-2'
                 onClick={() => { setConnectedInfo('') }}>
                 <div className='flex gap-2 items-center'>
                     <i class="fa-solid fa-arrow-right-from-bracket"></i>

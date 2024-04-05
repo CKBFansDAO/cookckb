@@ -4,7 +4,7 @@ import { ReactComponent as AppLogo } from '../../assets/images/logo-cookckb-whit
 
 const Footer = () => {
     return (
-        <div className='flex flex-col justify-center w-full px-5 bg-[#733DFF] text-white'>
+        <div className='flex flex-col justify-center w-full px-5 bg-color-main text-white'>
 
             <div className='flex w-full flex-col md:flex-row gap-10 py-10 md:py-20 justify-between md:px-10'>
                 <div className='flex items-center'>

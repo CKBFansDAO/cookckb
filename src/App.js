@@ -11,8 +11,8 @@ function App() {
                 <span class="title font-bold text-[40px] md:text-[100px]">{t('common.slogan')}</span>
                 <p class="text-center text-[20px] md:text-[30px] md:w-1/2">{t('common.slogan-desc')}</p>
                 <div class="mt-20 flex flex-col gap-14 md:flex-row">
-                    <a class="flex justify-center" href="#"><div class="flex h-10 cursor-pointer items-center justify-center rounded-full bg-[#733dff] px-10 py-1 text-base font-semibold  hover:opacity-90 text-[#EEE] md:text-xl">Get Started</div></a>
-                    <a href="https://docs.cookckb.dev" target="_blank" rel="noopener noreferrer" class="flex justify-center"><div class="flex h-10 cursor-pointer items-center justify-center rounded-full border border-[#733dff] px-10 py-1 text-base font-semibold text-[#733dff]  hover:opacity-90 md:text-xl">Learn More &gt;</div></a>
+                    <a class="flex justify-center" href="#"><div class="flex h-10 cursor-pointer items-center justify-center rounded-full bg-color-main px-10 py-1 text-base font-semibold  hover:opacity-90 text-[#EEE] md:text-xl">Get Started</div></a>
+                    <a href="https://docs.cookckb.dev" target="_blank" rel="noopener noreferrer" class="flex justify-center"><div class="flex h-10 cursor-pointer items-center justify-center rounded-full border border-color-main px-10 py-1 text-base font-semibold text-color-main  hover:opacity-90 md:text-xl">Learn More &gt;</div></a>
                 </div>
             </div>
         </div>

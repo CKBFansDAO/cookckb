@@ -39,7 +39,7 @@ export default {
           {
             buttons.map(btn => {
               return (
-                <div className={`rounded-full text-sm px-3 py-1 h-[30px] min-w-[100px] flex items-center ${btn.isDanger ? 'bg-[#FF4444]' : 'bg-[#50F412] '} text-[#111111] hover:opacity-70 justify-center  cursor-pointer`}
+                <div className={`rounded-full text-sm px-3 py-1 h-[30px] min-w-[100px] flex items-center ${btn.isDanger ? 'bg-[#FF4444]' : 'bg-color-main '} text-white font-semibold hover:opacity-70 justify-center  cursor-pointer`}
                   onClick={handleButton(btn.handler)} key={btn.name}>
                   {btn.name}
                 </div>
