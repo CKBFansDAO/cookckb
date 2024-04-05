@@ -12,7 +12,7 @@ import * as commons from '@ckb-lumos/common-scripts';
 
 import { ReactComponent as PendingIcon } from '../../assets/images/icon-trans-pending.svg';
 import { ReactComponent as SentIcon } from '../../assets/images/icon-trans-send.svg';
-import { ReactComponent as NoDataIcon } from '../../assets/images/pic-no-data.svg';
+import { ReactComponent as OopsIcon } from '../../assets/images/icon-oops.svg';
 import { ReactComponent as LoadingSpinIcon } from '../../assets/images/loading-spin.svg';
 
 import usePollingTx from '../../hooks/usePollingTx';
@@ -43,6 +43,7 @@ const TransferCKBView = () => {
 
     const renderConnectWallet = () => {
         return <div className='flex flex-col justify-center items-center gap-5'>
+            <OopsIcon></OopsIcon>
             <span className='title text-lg'>{t('common.connect-first')}</span>
             <div class="cursor-pointer h-[36px] border border-opacity-50 border-[#733DFF] hidden font-semibold rounded-md px-4 md:flex items-center"
                 onClick={() => setWalletSelectorOpen(true)}>

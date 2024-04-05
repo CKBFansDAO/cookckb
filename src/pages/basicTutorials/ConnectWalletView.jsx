@@ -91,8 +91,6 @@ const ConnectWalletView = () => {
                 {renderConnectBtn()}
                 {connectedInfo && renderConnectedInfo()}
             </div>
-
-            <WalletSelector></WalletSelector>
         </div>
     );
 }

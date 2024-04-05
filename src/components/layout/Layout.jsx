@@ -9,6 +9,7 @@ import {
     QueryClientProvider,
 } from '@tanstack/react-query'
 import Footer from '../footer/Footer';
+import WalletSelector from '../../walletmgr/WalletSelector';
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const Layout = () => {
             </div>
 
             <ToastContainer />
+            <WalletSelector></WalletSelector>
             <div id="app-message-box" />
         </div>
     </QueryClientProvider>
