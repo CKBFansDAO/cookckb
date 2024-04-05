@@ -28,7 +28,8 @@
       "loading":"Loading ...",
       "goto-page":"Go to",
       "page":"Page",
-      "you":"You"
+      "you":"You",
+      "connect-first":"Please connect the wallet first"
     },
     "toast": {},
     "alert": {

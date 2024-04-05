@@ -31,7 +31,7 @@ const TransferCKBView = () => {
     const { connectedInfo } = useWallet();
     const { balance, isLoading: isLoadingBalance, getBalance } = useCKBBalance(connectedInfo?.address, true);
     const [txTime, setTxTime] = useState(null);
-    const { walletManager } = useWallet();
+    const { walletManager, setWalletSelectorOpen } = useWallet();
     const { feeRate } = useFeeRate();
 
     const stopPolling = () => {
@@ -41,8 +41,18 @@ const TransferCKBView = () => {
 
     const { polling, success, txStatus } = usePollingTx({ hash: tx, stopCallback: stopPolling });
 
+    const renderConnectWallet = () => {
+        return <div className='flex flex-col justify-center items-center gap-5'>
+            <span className='title text-lg'>{t('common.connect-first')}</span>
+            <div class="cursor-pointer h-[36px] border border-opacity-50 border-[#733DFF] hidden font-semibold rounded-md px-4 md:flex items-center"
+                onClick={() => setWalletSelectorOpen(true)}>
+                <i class="fa-solid fa-wallet fa-lg mr-2"></i>{t('common.connect-wallet')}
+            </div>
+        </div>
+    }
+
     if (!connectedInfo || !connectedInfo.address || connectedInfo.address.length === 0) {
-        return <></>
+        return renderConnectWallet()
     }
 
     const handleAddressChanged = (e) => {

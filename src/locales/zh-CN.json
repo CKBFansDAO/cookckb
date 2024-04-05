@@ -28,7 +28,8 @@
       "loading":"数据加载中...",
       "goto-page":"跳到",
       "page":"页",
-      "you":"你"
+      "you":"你",
+      "connect-first":"请先连接钱包"
     },
     "toast": {},
     "alert": {
