@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+import 'animate.css';
 import './index.css';
-import App from './App';
+
 import reportWebVitals from './reportWebVitals';
 import { initLumos, updateScript } from './utils/lumos';
 import { changeLanguage, currentLanguage } from './utils/i18n';

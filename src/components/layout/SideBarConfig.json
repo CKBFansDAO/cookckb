@@ -18,6 +18,11 @@
                 "display_name": "nav.basic.transfer-ckb",
                 "route": "/basic_tutorials/transfer_ckb",
                 "icon": "🥪"
+            },
+            {
+                "display_name": "nav.basic.receive-ckb",
+                "route": "/basic_tutorials/receive_ckb",
+                "icon": "🍔"
             }
         ]
     },

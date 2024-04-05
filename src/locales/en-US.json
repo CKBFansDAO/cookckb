@@ -43,7 +43,8 @@
       "basic-tutorials":"Basic Tutorials",
       "basic": {
         "connect-wallets":"Connect Wallets",
-        "transfer-ckb":"Transfer CKB"
+        "transfer-ckb":"Transfer CKB",
+        "receive-ckb":"Receive CKB"
       },
       "spore-tutorials":"Spore",
       "spore": {

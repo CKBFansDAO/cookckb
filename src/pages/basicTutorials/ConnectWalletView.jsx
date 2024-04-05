@@ -69,7 +69,7 @@ const ConnectWalletView = () => {
                         <span className='hidden md:block'>{t('account.copied')}</span>
                     </div>}
                     <CopyToClipboard text={connectedInfo?.address} onCopy={onCopyAddress}>
-                        <i class="fa-regular fa-copy cursor-pointer"></i>
+                        <i class="fa-regular fa-copy cursor-pointer hover:text-color-main"></i>
                         
                     </CopyToClipboard>
                 </div>

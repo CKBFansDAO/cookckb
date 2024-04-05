@@ -10,10 +10,8 @@ import { bytes as byteUtils } from '@ckb-lumos/codec'
 import * as helpers from '@ckb-lumos/helpers';
 import * as commons from '@ckb-lumos/common-scripts';
 
-import { ReactComponent as PendingIcon } from '../../assets/images/icon-trans-pending.svg';
 import { ReactComponent as SentIcon } from '../../assets/images/icon-trans-send.svg';
 import { ReactComponent as OopsIcon } from '../../assets/images/icon-oops.svg';
-import { ReactComponent as LoadingSpinIcon } from '../../assets/images/loading-spin.svg';
 
 import usePollingTx from '../../hooks/usePollingTx';
 import { useWallet } from '../../walletmgr/WalletContext';
@@ -23,15 +21,15 @@ import { useFeeRate } from '../../hooks/useFeeRate';
 import { signTransaction } from '@joyid/ckb';
 
 const TransferCKBView = () => {
+
     const [t] = useTranslation();
+    const { walletManager, connectedInfo, setWalletSelectorOpen } = useWallet();
     const [sendToAddress, setAddress] = useState('');
     const [amount, setAmount] = useState('');
     const [isPaying, setIsPaying] = useState(false);
     const [tx, setTxHash] = useState(null);
-    const { connectedInfo } = useWallet();
     const { balance, isLoading: isLoadingBalance, getBalance } = useCKBBalance(connectedInfo?.address, true);
     const [txTime, setTxTime] = useState(null);
-    const { walletManager, setWalletSelectorOpen } = useWallet();
     const { feeRate } = useFeeRate();
 
     const stopPolling = () => {
@@ -380,7 +378,7 @@ const TransferCKBView = () => {
             <div className="flex gap-2 p-2">
                 <div className="flex h-12 w-7 justify-center items-center">
                     <div className="flex justify-center items-center h-7 w-7 bg-color-main rounded-full">
-                        {success ? <SentIcon></SentIcon> : <PendingIcon></PendingIcon>}
+                        {success ? <SentIcon></SentIcon> : <i className="h-4 w-4 fa-solid fa-spinner fa-spin-pulse text-white"></i>}
                     </div>
                 </div>
                 <div className="flex flex-col w-full gap-1">
@@ -435,8 +433,8 @@ const TransferCKBView = () => {
                 <button className='flex justify-center bg-color-main hover:bg-color-second cursor-pointer text-white w-[120px] md:w-[200px] text-center rounded-full py-2 disabled:bg-[#777777] disabled:cursor-not-allowed'
                     disabled={!canSend()}
                     onClick={onSendCKB}>
-                    <div className='flex gap-2'>
-                        {(isPaying || tx) && <LoadingSpinIcon className='h-5 w-5'></LoadingSpinIcon>}
+                    <div className='flex gap-2 items-center'>
+                        {(isPaying || tx) && <i className="h-4 w-4 fa-solid fa-spinner fa-spin-pulse"></i>}
                         {t('trans.send')}
                     </div>
                 </button>

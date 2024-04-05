@@ -39,6 +39,17 @@
       "ok": "好"
     },
     "nav": {
+      "home":"首页",
+      "basic-tutorials":"基础功能",
+      "basic": {
+        "connect-wallets":"连接多链钱包",
+        "transfer-ckb":"发送 CKB",
+        "receive-ckb":"CKB 收款"
+      },
+      "spore-tutorials":"Spore",
+      "spore": {
+        "create-spore":"Create Spore"
+      }
 
     },
     "page-title": {
