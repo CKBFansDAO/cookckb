@@ -128,9 +128,9 @@ const env = process.env.REACT_APP_ENV;
 
 let appConfig;
 
-if (env === "production") {
+if (env === "production" || env === "prod") {
     appConfig = prodConfig;
-} else if (env === "dev" || env === "staging") {
+} else if (env === "development" || env === "dev" || env === "staging") {
     appConfig = devConfig;
 } else {
     appConfig = devConfig;
