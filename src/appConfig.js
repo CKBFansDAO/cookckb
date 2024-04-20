@@ -1,6 +1,6 @@
 import { predefined } from "@ckb-lumos/config-manager";
 
-// 下面配置的 Urls 用于应用 rpc 请求分流，通过 randomIndex 来决定加载哪一个，
+// 下面配置的 Urls 用于应用 rpc 请求分流，通过 devdRandomIndex 或者 prodRandomIndex 来决定加载哪一个，
 // 注意:
 // 1、每组 url 的数量保持一致，如果应用有自己的 rpc 服务，可自行添加
 // 2、如果你希望某一个 url 的请求概率增加，则在 url 数组里多添加该地址即可，比如：
@@ -19,8 +19,6 @@ const prodUrls = {
         "https://mainnet.ckbapp.dev",
     ]
 }
-
-const RPC_COUNT = 3;   
 */
 const devdUrls = {
     ckb_indexer_url: [
@@ -44,10 +42,10 @@ const prodUrls = {
     ]
 }
 
-const RPC_COUNT = 2;
-
-// 生成一个 0 到 RPC_COUNT - 1的随机整数，用于确定页面 rpc 请求的 url
-const randomIndex = Math.floor(Math.random() * RPC_COUNT);
+const devdRandomCKBRPCIndex = Math.floor(Math.random() * devdUrls.ckb_rpc_url.length);
+const devdRandomCKBIndexerIndex = Math.floor(Math.random() * devdUrls.ckb_indexer_url.length);
+const prodRandomCKBRPCIndex = Math.floor(Math.random() * prodUrls.ckb_rpc_url.length);
+const prodRandomCKBIndexerIndex = Math.floor(Math.random() * prodUrls.ckb_indexer_url.length);
 
 const prodConfig = {
     APP: {
@@ -57,8 +55,8 @@ const prodConfig = {
         JOYID_BUY_CKB:"https://app.joy.id/exchange?token=ckb",
     },
     CKB: {
-        CKB_RPC_URL: prodUrls.ckb_rpc_url[randomIndex],
-        CKB_INDEXER_URL: prodUrls.ckb_indexer_url[randomIndex],
+        CKB_RPC_URL: prodUrls.ckb_rpc_url[prodRandomCKBRPCIndex],
+        CKB_INDEXER_URL: prodUrls.ckb_indexer_url[prodRandomCKBIndexerIndex],
         CKB_EXPLORER_URL: "https://explorer.nervos.org",
         PREFIX: 'ckb',
         SCRIPTS: predefined.LINA.SCRIPTS,
@@ -95,8 +93,8 @@ const devConfig = {
         JOYID_BUY_CKB:"https://testnet.joyid.dev/exchange?token=ckb",
     },
     CKB: {
-        CKB_RPC_URL: devdUrls.ckb_rpc_url[randomIndex],
-        CKB_INDEXER_URL: devdUrls.ckb_indexer_url[randomIndex],
+        CKB_RPC_URL: devdUrls.ckb_rpc_url[devdRandomCKBRPCIndex],
+        CKB_INDEXER_URL: devdUrls.ckb_indexer_url[devdRandomCKBIndexerIndex],
         CKB_EXPLORER_URL: "https://pudge.explorer.nervos.org",
         PREFIX: 'ckt',
         SCRIPTS: predefined.AGGRON4.SCRIPTS,
@@ -130,9 +128,9 @@ const env = process.env.REACT_APP_ENV;
 
 let appConfig;
 
-if (env === "production") {
+if (env === "production" || env === "prod") {
     appConfig = prodConfig;
-} else if (env === "dev" || env === "staging") {
+} else if (env === "development" || env === "dev" || env === "staging") {
     appConfig = devConfig;
 } else {
     appConfig = devConfig;
